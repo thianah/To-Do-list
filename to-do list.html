@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+      body {
+        background-color: rgb(160, 59, 59);
+      }
+      input {
+        border-width: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TO-DO LIST</h1>
+    <input
+      style="height: 34px"
+      type="text"
+      placeholder="enter your to-do list"
+    />
+    <button onclick="addtask()">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      function addtask() {
+        //Get the value of the input field
+        const taskInput = document.createElementById("taskInput");
+        const task = taskInput.value.trim();
+        const taskList = document.getElementById("taskList");
+
+        if (task) {
+          const li = document.createElement("li");
+          Li.textcontent = task;
+          taskList.appendChild(li);
+          taskInput.value = ""; //clear input field
+        } else {
+          alert("please enter a task.");
+        }
+      }
+    </script>
+  </body>
+</html>
